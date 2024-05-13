@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title> News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 10%;
+            height: auto;
+            background-color: var(--off-white);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 1rem;
+            height: 60px;
+        }
+
+        ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+        }
+
+        :root {
+            --soft-orange: hsl(35, 77%, 62%);
+            --soft-red: hsl(5, 85%, 63%);
+            --off-white: #fffdfa;
+            --grayish-blue: hsl(233, 8%, 79%);
+            --dark-grayish-blue: hsl(236, 13%, 42%);
+            --very-dark-blue: hsl(240, 100%, 5%);
+        }
+
+        a,
+        p {
+            color: var(--dark-grayish-blue);
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: var(--soft-red);
+        }
+
+        .logo {
+            display: block;
+            width: 40px;
+        }
+
+        .nav-link:hover {
+            color: var(--soft-red);
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .hero {
+            width: 66%;
+        }
+
+        .new {
+            width: 32%;
+            background-color: var(--very-dark-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+
+        .new p {
+            font-size: 0.76rem;
+        }
+
+        .new h1 {
+            color: var(--soft-orange);
+            margin-left: 5%;
+            margin-top: 5%;
+            align-self: flex-start;
+        }
+
+        .new-text {
+            width: 90%;
+            padding-bottom: 3%;
+        }
+
+        .new-text>h3 {
+            color: var(--off-white);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .new-text>h3:hover {
+            color: var(--soft-orange);
+            cursor: pointer;
+        }
+
+        .hero img {
+            width: 100%;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid var(--dark-grayish-blue);
+        }
+
+        .hero img:nth-of-type(2) {
+            display: none;
+        }
+
+        .hero-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .bright {
+            width: 50%;
+        }
+
+        .bright h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: var(--very-dark-blue);
+
+        }
+
+        .readmore {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        button {
+            background-color: var(--soft-red);
+            color: var(--off-white);
+            padding: 14px;
+            border: none;
+            width: 50%;
+            letter-spacing: 3px;
+            margin-top: 3%;
+        }
+
+        button a {
+            color: var(--off-white);
+        }
+
+        button:hover {
+            background-color: var(--very-dark-blue);
+            cursor: pointer;
+        }
+
+        .footer {
+            width: 100%;
+            justify-content: space-between;
+            margin: 4rem 0;
+            display: flex;
+        }
+
+        .Card {
+            width: 33%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Card img {
+            width: 30%;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 66%;
+        }
+
+        .card-body p {
+            font-size: 0.76rem;
+            font-weight: 400;
+        }
+
+        .card-body h1 {
+            color: var(--grayish-blue);
+        }
+
+        .card-body h3 {
+            color: var(--very-dark-blue);
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .card-body>h3:hover {
+            color: var(--soft-red);
+        }
+
+        .menu {
+            display: none;
+        }
+        nav button{
+            display: none;
+        }
+
+        @media (max-width:778px) {
+            nav button{
+                display: flex;
+                background-color: var(--off-white);
+                margin-left: 50%;    
+            }
+            nav button:hover{
+                display: none;
+            }
+            nav button img:nth-of-type(2){
+                display:none ;
+            }
+            nav button img:nth-of-type(1){
+                display: block;
+              margin-left: 100%;
+            }
+           
+            ul {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero img:nth-of-type(1) {
+                display: none;
+            }
+
+            .hero img:nth-of-type(2) {
+                display: block;
+            }
+
+            .hero,.new,.bright,.readmore {
+                width: 100%;
+            }
+
+            .new {
+                height: 550px;
+                margin-top: 2rem;
+            }
+
+            .new p {
+                width: 3rem;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .main,
+            .hero-content,
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            button {
+                margin-top: 1rem;
+            }
+            
+
+            .Card {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <img class="logo" src="./logo.svg" alt="Logo"></a>
+        
+        <button class="navbar-toggler"  ><img class="menu" src="./icon-menu.svg" alt="menu">
+            <img src="./icon-menu-close.svg" alt="close-icon">
+        </button>
+        <ul>
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">New</a>
+            </li>
+
+            <li>
+                <a href="#">Popular</a>
+            </li>
+
+            <li>
+                <a href="#">Trending</a>
+            </li>
+
+            <li>
+                <a href="#">Categories</a>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="hero">
+            <img src="./image-web-3-desktop.jpg" alt="desktop">
+            <img src="./image-web-3-mobile.jpg" alt="web mobile">
+
+            <div class="hero-content">
+                <div class="bright">
+                    <h1 class="card-text">The Bright Future of Web 3.0?</h1>
+                </div>
+
+                <div class="readmore">
+                    <p>
+                        We dive into the next evolution of the web that claims to put the power of the platforms back
+                        into the hands of the
+                        people.
+                        But is it really fulfilling its promise?
+                    </p>
+                    <button>
+                        READ MORE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="new">
+            <h1>New</h1>
+
+            <div class="new-text">
+                <h3>Hydrogen VS Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+
+            <hr>
+
+            <div class="new-text">
+                <h3>The Downsides of AI Artistry</h3>
+                <p>What are the possible adverse effects of on-demand AI image generation?</p>
+            </div>
+
+            <hr>
+
+            <div class="new-text">
+                <h3>Is VC Funding Drying Up?</h3>
+                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="Card">
+            <img src="./image-retro-pcs.jpg" alt="Retro">
+            <div class="card-body">
+                <h1>01</h1>
+                <h3>Reviving Retro PCs</h3>
+                <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+        </div>
+        <div class="Card">
+            <img src="./image-top-laptops.jpg" alt="laptop">
+            <div class="card-body">
+                <h1>02</h1>
+                <h3>Top 10 Laptops of 2022</h3>
+                <p class="card-text">Our best picks for various needs and budgets.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <img src="./image-gaming-growth.jpg" alt="Gaming">
+            <div class="card-body">
+                <h1>03</h1>
+                <h3>The Growth of Gaming</h3>
+                <p class="card-text">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by S.N. <a href="#"></a>.
+        </div>
+    </footer>
+</body>
+
+</html>
