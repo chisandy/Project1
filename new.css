@@ -218,9 +218,7 @@ button:hover {
 .menu {
     display: none;
 }
-nav button{
-    display: none;
-}
+
 
 @media (max-width:778px) {
     nav button{
