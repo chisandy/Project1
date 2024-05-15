@@ -24,16 +24,16 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:end;
     width: 100%;
     margin-top: 1rem;
     height: 60px;
 }
 
-ul {
+ ul {
     width: 50%;
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content: space-between; 
     list-style: none;
 
 }
@@ -56,7 +56,9 @@ p {
 a:hover {
     color: var(--soft-red);
 }
-
+a{
+    text-decoration: none;
+}
 .logo {
     display: block;
     width: 40px;
@@ -94,7 +96,7 @@ a:hover {
 .new h1 {
     color: var(--soft-orange);
     margin-left: 5%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     align-self: flex-start;
 }
 
@@ -159,8 +161,7 @@ button {
     padding: 14px;
     border: none;
     width: 50%;
-    letter-spacing: 3px;
-    margin-top: 3%;
+    
 }
 
 button a {
@@ -217,17 +218,21 @@ button:hover {
 
 .menu {
     display: none;
+    
 }
+
 
 
 @media (max-width:778px) {
    
-    ul {
-        display: none;
+     ul{
+        display:none;
     }
 
     .menu {
         display: block;
+        float: end;
+        
     }
 
     .hero img:nth-of-type(1) {
@@ -243,20 +248,19 @@ button:hover {
     }
 
     .new {
-        height: 550px;
+        height: 480px;
         margin-top: 2rem;
     }
 
     .new p {
-        width: 3rem;
+        font-size: 1rem;
+        /* width: 3rem;
         display:flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;
+        align-items: center; */
     }
-    .main,
-    .hero-content,
-    .footer {
+    .main,.hero-content,.footer {
         flex-direction: column;
         gap: 20px;
     }
@@ -264,8 +268,9 @@ button:hover {
     button {
         margin-top: 1rem;
     }
-    
-
+    li{
+      font-size:larger;
+    }
     .Card {
         width: 100%;
     }

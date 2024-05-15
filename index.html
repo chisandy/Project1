@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
     <title> News homepage</title>
+
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -17,20 +19,17 @@
 
 <body>
 
-    <nav>
-      <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-         </div>
-        <div class="offcanvas-body">
-           <ul>
-            <li>
+    <nav class="navbar navbar-expand-lg me-auto">
+
+        <img class="logo" src="logo.svg" alt="logo">
+
+        <ul >
+            <li class="nav-item" >
                 <a href="#">Home</a>
             </li>
 
             <li>
-                <a href="#">New</a>
+                <a href="#">News</a>
             </li>
 
             <li>
@@ -44,22 +43,46 @@
             <li>
                 <a href="#">Categories</a>
             </li>
-        </ul>
-        </div>
-        </div>
+         </ul>
+
         <a class="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight">
         <img src="./icon-menu.svg" alt="menu">
         </a>
     </nav>
 
-    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-    aria-controls="offcanvasRight">Toggle right offcanvas</button>
-     -->
-    
-           
-      
 
+       <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close text-dark display-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div> 
+
+        <div class="offcanvas-body">
+           <ul class="navbar-nav" >
+            <li class="nav-item" >
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">News</a>
+            </li>
+
+            <li>
+                <a href="#">Popular</a>
+            </li>
+
+            <li>
+                <a href="#">Trending</a>
+            </li>
+
+            <li>
+                <a href="#">Categories</a>
+            </li>
+         </ul>
+         </div>
+        </div>
+      
 
     <section class="main">
         <div class="hero">
@@ -123,7 +146,7 @@
             <div class="card-body">
                 <h1>02</h1>
                 <h3>Top 10 Laptops of 2022</h3>
-                <p class="card-text">Our best picks for various needs and budgets.</p>
+                <p>Our best picks for various needs and budgets.</p>
             </div>
         </div>
         <div class="Card">
@@ -131,7 +154,7 @@
             <div class="card-body">
                 <h1>03</h1>
                 <h3>The Growth of Gaming</h3>
-                <p class="card-text">How the pandemic has sparked fresh opportunities.</p>
+                <p>How the pandemic has sparked fresh opportunities.</p>
             </div>
         </div>
     </section>
